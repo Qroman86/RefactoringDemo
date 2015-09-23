@@ -9,8 +9,8 @@ import com.scrumtrek.simplestore.Rental;
 
 public class CustomerTest {
 
-	private void universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode(String title,
-			String customerName, PriceCodes priceCode, int numOfDaysRented, String etalonAmount) {
+	private void assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode(String title, String customerName,
+			PriceCodes priceCode, int numOfDaysRented, String etalonAmount) {
 
 		Movie stubMovieLocal = new MovieBuilder().setPriceCode(priceCode).setTitle(title).build();
 		Rental stubRentalLocal = new RentalBuilder().setMovie(stubMovieLocal).setDaysRented(numOfDaysRented).build();
@@ -24,7 +24,7 @@ public class CustomerTest {
 	@Test
 	public void shouldTotalAmountEqualToEtalonWhenStatementPrintedForChildrensPriceCode2() {
 
-		universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella1", "Mickey Mouse",
+		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella1", "Mickey Mouse",
 				PriceCodes.Childrens, 5, "3.0");
 
 	}
@@ -32,21 +32,21 @@ public class CustomerTest {
 	@Test
 	public void shouldTotalAmountEqualToEtalonAlternativeValueWhenStatementPrintedForChildrensPriceCode1() {
 
-		universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella2", "Mickey Mouse",
+		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella2", "Mickey Mouse",
 				PriceCodes.Childrens, 1, "1.5");
 	}
 
 	@Test
 	public void shouldTotalAmountEqualToEtalonWhenStatementPrintedForNewReleasePriceCode() {
 
-		universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella3", "Mickey Mouse",
+		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella3", "Mickey Mouse",
 				PriceCodes.NewRelease, 5, "15.0");
 	}
 
 	@Test
 	public void shouldTotalAmountEqualToEtalonWhenStatementPrintedForRegularPriceCode() {
 
-		universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella4", "Mickey Mouse",
+		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella4", "Mickey Mouse",
 				PriceCodes.Regular, 5, "6.5");
 
 	}
@@ -54,7 +54,7 @@ public class CustomerTest {
 	@Test
 	public void shouldTotalAmountEqualToEtalonAlternativeValueWhenStatementPrintedForRegularPriceCode() {
 
-		universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella5", "Mickey Mouse",
+		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella5", "Mickey Mouse",
 				PriceCodes.Regular, 5, "6.5");
 
 	}
