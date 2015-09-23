@@ -1,5 +1,8 @@
 package atc;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 import org.junit.Test;
 
 import com.scrumtrek.simplestore.Customer;
@@ -71,6 +74,40 @@ public class CustomerTest {
 
 		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella6", "Mickey Mouse",
 				PriceCodes.Regular, 1, "2.0");
+
+	}
+
+	// FOR COVERAGE ONLU =:)
+
+	@Test
+	public void shouldMovieHavePriceCodeWhenCreateMovieObject() {
+		Movie sut = new Movie("Cinderella", PriceCodes.Childrens);
+
+		assertEquals(PriceCodes.Childrens, sut.getPriceCode());
+
+	}
+
+	@Test
+	public void shouldMovieHaveTitleWhenCreateMovieObject() {
+		Movie sut = new Movie("Cinderella", PriceCodes.Childrens);
+
+		assertEquals("Cinderella", sut.getTitle());
+
+	}
+
+	@Test
+	public void shouldCustomerCreatedWhenCreateCustomerObject() {
+		Customer custMinnieMouse = new Customer("Minnie Mouse");
+
+		assertNotNull(custMinnieMouse);
+
+	}
+
+	@Test
+	public void shouldCustomerHaveNameWhenCreateCustomerObject() {
+		Customer custMinnieMouse = new Customer("Minnie Mouse");
+
+		assertEquals("Minnie Mouse", custMinnieMouse.getName());
 
 	}
 
