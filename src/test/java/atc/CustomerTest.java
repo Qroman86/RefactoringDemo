@@ -22,7 +22,7 @@ public class CustomerTest {
 	}
 
 	@Test
-	public void shouldTotalAmountEqualToEtalonWhenStatementPrintedForChildrensPriceCode2() {
+	public void shouldTotalAmountEqualToEtalonWhenStatementPrintedForChildrensPriceCodeAndRentDay5() {
 
 		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella1", "Mickey Mouse",
 				PriceCodes.Childrens, 5, "3.0");
@@ -30,21 +30,28 @@ public class CustomerTest {
 	}
 
 	@Test
-	public void shouldTotalAmountEqualToEtalonAlternativeValueWhenStatementPrintedForChildrensPriceCode1() {
+	public void shouldTotalAmountEqualToEtalonAlternativeValueWhenStatementPrintedForChildrensPriceCodeAndRentDay1() {
 
 		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella2", "Mickey Mouse",
 				PriceCodes.Childrens, 1, "1.5");
 	}
 
 	@Test
-	public void shouldTotalAmountEqualToEtalonWhenStatementPrintedForNewReleasePriceCode() {
+	public void shouldTotalAmountEqualToEtalonWhenStatementPrintedForNewReleasePriceCodeAndRentDay1() {
+
+		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella3", "Mickey Mouse",
+				PriceCodes.NewRelease, 1, "3.0");
+	}
+
+	@Test
+	public void shouldTotalAmountEqualToEtalonWhenStatementPrintedForNewReleasePriceCodeAndRentDay5() {
 
 		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella3", "Mickey Mouse",
 				PriceCodes.NewRelease, 5, "15.0");
 	}
 
 	@Test
-	public void shouldTotalAmountEqualToEtalonWhenStatementPrintedForRegularPriceCode() {
+	public void shouldTotalAmountEqualToEtalonWhenStatementPrintedForRegularPriceCodeAndRentDay5() {
 
 		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella4", "Mickey Mouse",
 				PriceCodes.Regular, 5, "6.5");
@@ -52,7 +59,7 @@ public class CustomerTest {
 	}
 
 	@Test
-	public void shouldTotalAmountEqualToEtalonAlternativeValueWhenStatementPrintedForRegularPriceCode() {
+	public void shouldTotalAmountEqualToEtalonAlternativeValueWhenStatementPrintedForRegularPriceCodeAndRentDay5() {
 
 		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella5", "Mickey Mouse",
 				PriceCodes.Regular, 5, "6.5");
@@ -60,7 +67,7 @@ public class CustomerTest {
 	}
 
 	@Test
-	public void shouldTotalAmountEqualToEtalonAlternativeValueWhenStatementPrintedForRegularPriceCode2() {
+	public void shouldTotalAmountEqualToEtalonAlternativeValueWhenStatementPrintedForRegularPriceCodeAndRentDay1() {
 
 		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella6", "Mickey Mouse",
 				PriceCodes.Regular, 1, "2.0");
