@@ -70,22 +70,38 @@ public class CustomerTest {
 	@Test
 	public void shouldTotalAmountEqualToEtalonWhenStatementPrintedForRegularPriceCode() {
 
-		universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella", "Mickey Mouse",
+		universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella1", "Mickey Mouse",
 				PriceCodes.Childrens, 5, "3.0");
+
+	}
+
+	@Test
+	public void shouldTotalAmountEqualToEtalonAlternativeValueWhenStatementPrintedForRegularPriceCode() {
+
+		universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella2", "Mickey Mouse",
+				PriceCodes.Childrens, 1, "1.5");
 	}
 
 	@Test
 	public void shouldTotalAmountEqualToEtalonWhenStatementPrintedForNewReleasePriceCode() {
 
-		universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella", "Mickey Mouse",
+		universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella3", "Mickey Mouse",
 				PriceCodes.NewRelease, 5, "15.0");
 	}
 
 	@Test
 	public void shouldTotalAmountEqualToEtalonWhenStatementPrintedForChildrensPriceCode() {
 
-		universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella", "Mickey Mouse",
-				PriceCodes.Childrens, 5, "3.0");
+		universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella4", "Mickey Mouse",
+				PriceCodes.Regular, 5, "6.5");
+
+	}
+
+	@Test
+	public void shouldTotalAmountEqualToEtalonAlternativeValueWhenStatementPrintedForChildrensPriceCode() {
+
+		universalShouldTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella5", "Mickey Mouse",
+				PriceCodes.Regular, 5, "6.5");
 
 	}
 }
