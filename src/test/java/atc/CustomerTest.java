@@ -58,4 +58,13 @@ public class CustomerTest {
 				PriceCodes.Regular, 5, "6.5");
 
 	}
+
+	@Test
+	public void shouldTotalAmountEqualToEtalonAlternativeValueWhenStatementPrintedForRegularPriceCode2() {
+
+		assertTotalAmountEqualToEtalonWhenStatementPrintedForSomePriceCode("Cinderella6", "Mickey Mouse",
+				PriceCodes.Regular, 1, "2.0");
+
+	}
+
 }
