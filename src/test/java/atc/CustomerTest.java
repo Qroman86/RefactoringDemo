@@ -111,4 +111,24 @@ public class CustomerTest {
 
 	}
 
+	@Test
+	public void shouldNotNullStatementGenerateWhenNonZeroRentalIsGiven() {
+
+		Movie dummyMovie = new Movie("Cinderella", PriceCodes.Childrens);
+		Customer sut = new Customer("Mickey Mouse");
+
+		Rental dummyRental = new Rental(dummyMovie, 5);
+		sut.addRental(dummyRental);
+
+		assertNotNull(sut.Statement());
+	}
+
+	@Test
+	public void shouldMovieBeenCreatedWhenCreateMovieObject() {
+		Movie sut = new Movie("Cinderella", PriceCodes.Childrens);
+
+		assertNotNull(sut);
+
+	}
+
 }
